@@ -7,6 +7,8 @@ solve(Board) :-
     term_variables(Board, Cells)
     , Cells ins 1..9
 
+    , maplist(all_distinct, Board),
+
     , transpose(Board, BoardTr)
     , maplist(all_distinct, BoardTr)
 
